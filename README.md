@@ -19,3 +19,5 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+If you want to initialize the proyect, you have to create a new account in Firebase. Then create a new Firebase project and use your own Api Key at the db.js file.
