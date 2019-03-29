@@ -57,8 +57,8 @@ ul {
     margin: 0;
     padding: 6px 0px;
     overflow: hidden;
-    background-color: #fff;
-    border-bottom: 3px solid #3B3C3C;
+    background-color: #F5F5F5;
+    border-bottom: 3px solid #069868;
     position: fixed;
     top: 0;
     width: 100%;

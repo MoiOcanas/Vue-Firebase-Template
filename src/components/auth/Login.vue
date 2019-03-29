@@ -6,7 +6,9 @@
             <h3 class="mainTitle">Login</h3>
             <input type="email" v-model="user.email" class="loginInput" placeholder="Username">
             <input type="password" v-model="user.password" class="loginInput" placeholder="Password">
-            <input type="submit" value="LOGIN" class="loginButton">
+            <div class="button-container">
+                <input type="submit" value="LOGIN" class="loginButton">
+            </div>
         </form>
     </div>
 </template>
@@ -42,15 +44,15 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
     h3 {
-        font-family: 'Ubuntu Condensed', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-size: 40px;
         text-align: center;
     }
     .login {
         margin: 50px auto;
-        width: 400px;
+        width: 40%;
         padding: 30px 25px;
         background: #ECECEC;
     }
@@ -62,7 +64,6 @@ export default {
         padding-left: 10px;
         font-size: 15px;
         background: #fff;
-        border: 1px solid #ccc;
     }
 
     .loginInput:focus {
@@ -71,23 +72,26 @@ export default {
     }
 
     .loginButton {
-        width: 100%;
+        width: 30%;
         height: 50px;
         padding: 0;
+        margin: 0 auto;
         font-size: 18px;
         color: #fff;
         text-align: center;
-        background: black;
+        background-color: #069868;
         border: 0;
         cursor: pointer;
         outline: 0;
-        border-radius: 3px;
+        transition: box-shadow 0.5s;
+    }
+
+    .button-container {
+        text-align: center;
     }
 
     .loginButton:hover {
-        color: black;
-        background: #fff;
-        border: 1px solid black;
+        box-shadow: 3px 4px 2px #888888;
     }
 </style>
 
