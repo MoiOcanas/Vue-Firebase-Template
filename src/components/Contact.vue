@@ -1,11 +1,13 @@
 <template>
     <div>
         <br>
+        <br>
+        <br>
         <div class="container border-bottom">
             <br>
             <h1>Our team</h1>
             <br>
-            <div class="row">
+            <div class="row index">
                 <div class="col">
                     <br>
                     <div style="text-align: center;">
@@ -117,6 +119,10 @@ export default {
 
     .ico2 {
         margin-right: 30px;
+    }
+
+    .index {
+        z-index: -1;
     }
 </style>
 

@@ -1,6 +1,8 @@
 <template>
     <div>
         <br>
+        <br>
+        <br>
         <div class="container border-bottom">
             <br>
             <h1>About</h1>

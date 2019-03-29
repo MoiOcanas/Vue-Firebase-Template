@@ -2,11 +2,11 @@
     <div>
       <ul>
         <i class="fab fa-vuejs fa-3x icon-vue"></i>
-        <li v-if="!authUser"><router-link :to="{ name: 'Main'}">HOME</router-link></li>
-        <li v-if="!authUser"><router-link :to="{ name: 'About'}">ABOUT</router-link></li>
-        <li v-if="!authUser"><router-link :to="{ name: 'Contact'}">CONTACT</router-link></li>
         <li v-if="!authUser"><router-link :to="{ name: 'Login'}">LOGIN</router-link></li>
         <li v-if="!authUser"><router-link :to="{ name: 'Signup'}">SIGNUP</router-link></li>
+        <li v-if="!authUser"><router-link :to="{ name: 'About'}">ABOUT</router-link></li>
+        <li v-if="!authUser"><router-link :to="{ name: 'Contact'}">OUR TEAM</router-link></li>
+        <li v-if="!authUser"><router-link :to="{ name: 'Main'}">HOME</router-link></li>
         <li v-if="authUser"><router-link :to="{ name: 'Profile'}">PROFILE</router-link></li>
         <li v-if="authUser"><router-link :to="{ name: 'Request'}">REQUEST</router-link></li>
         <li v-if="authUser"><router-link :to="{ name: 'Results'}">RESULTS</router-link></li>
