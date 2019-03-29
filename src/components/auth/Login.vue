@@ -52,7 +52,7 @@ export default {
         margin: 50px auto;
         width: 400px;
         padding: 30px 25px;
-        background: #ccc;
+        background: #ECECEC;
     }
 
     .loginInput {

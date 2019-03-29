@@ -1,7 +1,7 @@
 <template>
     <div>
-      <i class="fab fa-angrycreative fa-5x" style="margin-left: 30px;"></i>
       <ul>
+        <i class="fab fa-vuejs fa-3x icon-vue"></i>
         <li v-if="!authUser"><router-link :to="{ name: 'Main'}">HOME</router-link></li>
         <li v-if="!authUser"><router-link :to="{ name: 'About'}">ABOUT</router-link></li>
         <li v-if="!authUser"><router-link :to="{ name: 'Contact'}">CONTACT</router-link></li>
@@ -53,27 +53,38 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 ul {
-  list-style-type: none;
-  float: right;
-  margin-top: 25px;
+    list-style-type: none;
+    margin: 0;
+    padding: 6px 0px;
+    overflow: hidden;
+    background-color: #fff;
+    border-bottom: 3px solid #3B3C3C;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 ul li {
-  display: inline-block;
+  float: right;
+  margin: 8px;
 }
 
 ul li a {
-  text-decoration: none;
-  color: black;
-  padding: 5px 20px;
-  border: 1px solid transparent;
-  transition: 0.6s ease;
-  border-radius: 3px;
+    display: block;
+    color: #000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 ul li a:hover {
-  background-color: black;
-  color: white;
+  color: #fff;
+  background-color: #3B3C3C;
+}
+
+.icon-vue {
+  margin: 15px 15px 0px 25px;
 }
 
 #logOut {

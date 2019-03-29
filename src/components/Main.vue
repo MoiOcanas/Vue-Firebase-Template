@@ -2,7 +2,7 @@
         <div>
         <header>
           <div class="title">
-            <h1>WELCOME</h1>
+            <h3>WELCOME TO MY TEMPLATE</h3>
           </div>
           <div class="button">
             <router-link :to="{ name: 'Login'}" class="btn">GET INSIDE</router-link>
@@ -98,9 +98,9 @@ ul li.active a {
     transform: translate(-50%, -50%);
 }
 
-.title h1 {
+.title h3 {
  color: #fff;
- font-size: 70px;
+ font-size: 50px;
 }
 
 .button {
