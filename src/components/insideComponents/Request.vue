@@ -1,5 +1,8 @@
 <template>
     <div>
+        <br>
+        <br>
+        <br>
         <form class="request" @submit.prevent="addRequest">
             <h3>Make a request</h3>
                     <input type="text" class="requestInput" v-model="newRequest.name" placeholder="Name">
@@ -13,7 +16,9 @@
                     <h6>Upload a photo</h6>
                     <input type="file" class="form-control-file" id="exampleFormControlFile1">
                 </div>
-            <input type="submit" value="SUBMIT" class="requestButton">
+            <div class="button-container">
+                <input type="submit" value="SUBMIT" class="requestButton">
+            </div>
         </form>
     </div>
 </template>
@@ -84,9 +89,10 @@ export default {
 
     .request {
         margin: 50px auto;
-        width: 500px;
+        width: 40%;
         padding: 30px 25px;
-        background: #ccc;
+        background: #F5F5F5;
+        box-shadow: 1px 1px 2px #888888;
     }
 
     .requestInput {
@@ -104,17 +110,27 @@ export default {
         outline: none;
     }
 
+    .button-container {
+        text-align: center;
+    }
+
     .requestButton {
-        width: 100%;
+        width: 30%;
         height: 50px;
         padding: 0;
+        margin: 0 auto;
         font-size: 18px;
         color: #fff;
         text-align: center;
-        background: black;
+        background-color: #069868;
         border: 0;
         cursor: pointer;
         outline: 0;
+        transition: box-shadow 0.5s;
+    }
+
+    .requestButton:hover {
+        box-shadow: 3px 4px 2px #888888;
     }
 </style>
 

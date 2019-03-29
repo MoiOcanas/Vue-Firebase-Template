@@ -1,6 +1,8 @@
 <template>
     <div>
         <br>
+        <br>
+        <br>
         <div class="container">
             <h3>Requests</h3>
                 <table class="table tableConfig">

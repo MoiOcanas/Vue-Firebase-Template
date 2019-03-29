@@ -54,7 +54,8 @@ export default {
         margin: 50px auto;
         width: 40%;
         padding: 30px 25px;
-        background: #ECECEC;
+        background: #F5F5F5;
+        box-shadow: 1px 1px 2px #888888;
     }
 
     .loginInput {
