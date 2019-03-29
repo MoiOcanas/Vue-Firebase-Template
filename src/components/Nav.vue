@@ -88,17 +88,17 @@ ul li a:hover {
 }
 
 #logOut {
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  color: black;
-  padding: 5px 20px;
-  border: 1px solid transparent;
-  transition: 0.6s ease;
-  border-radius: 3px;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 #logOut:hover {
-  background-color: black;
-  color: white;
+  color: #fff;
+  background-color: #3B3C3C;
   cursor: pointer;
 }
 

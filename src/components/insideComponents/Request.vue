@@ -66,24 +66,24 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
     h1 {
-        font-family: 'Ubuntu Condensed', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-size: 70px;
     }
 
     h3 {
-        font-family: 'Ubuntu Condensed', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-size: 40px;
     }
 
     h5 {
-        font-family: 'Ubuntu Condensed', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-size: 30px;
     }
 
     h6 {
-        font-family: 'Ubuntu Condensed', sans-serif;
+        font-family: 'Roboto Condensed', sans-serif;
         font-size: 20px;
     }
 
