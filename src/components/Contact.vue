@@ -95,6 +95,7 @@ export default {
     }
 
     .container {
+        z-index: 2;
         background:white;
         border-radius: 3px;
         color: black;

@@ -58,6 +58,7 @@ export default {
         background:white;
         border-radius: 3px;
         color: black;
+        z-index: 2;
     }
 
     .textProps {

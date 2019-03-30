@@ -8,7 +8,7 @@
         <div class="container">
             <h3>Requests</h3>
                 <table class="table tableConfig">
-                    <thead class="thead-dark">
+                    <thead class="thead">
                         <tr>
                             <th scope="col">Name</th>
 
@@ -24,9 +24,9 @@
                             <td>{{ req.address }}</td>
                             <td>{{ req.model}}</td>
                             <td>
-                            <input type="button" @click="deleteItem(req['.key'])" class="btn btn-danger" value="DELETE">
-                             <router-link :to="{ name: 'Edit', params: {id: req['.key']} }" class="btn btn-info">
-                                EDIT
+                            <input type="button" @click="deleteItem(req['.key'])" class="deleteButton" value="Delete">
+                             <router-link :to="{ name: 'Edit', params: {id: req['.key']} }" class="editButton">
+                                Edit
                             </router-link>
                             </td>
                         </tr>
@@ -105,6 +105,41 @@ export default {
 
     .tableConfig {
         background-color: #ccc;
+    }
+
+     .deleteButton {
+        width: 30%;
+        height: 50px;
+        padding: 0;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        background-color: #B60D0D;
+        border: 0;
+        cursor: pointer;
+        outline: 0;
+        transition: box-shadow 0.5s;
+    }
+
+    .editButton {
+        width: 30%;
+        height: 50px;
+        padding: 14px;
+        margin: 0 auto;
+        font-size: 18px;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        background-color: #0D9BB6;
+        border: 0;
+        cursor: pointer;
+        outline: 0;
+        transition: box-shadow 0.5s;
+    }
+
+    .deleteButton:hover, .editButton:hover {
+        box-shadow: 3px 4px 2px #888888;
     }
 </style>
 
