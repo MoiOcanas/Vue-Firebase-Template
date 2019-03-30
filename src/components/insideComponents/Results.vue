@@ -104,7 +104,8 @@ export default {
     }
 
     .tableConfig {
-        background-color: #ccc;
+        background-color: #F5F5F5;
+        box-shadow: 1px 1px 2px #888888;
     }
 
      .deleteButton {
