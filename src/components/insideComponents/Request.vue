@@ -56,6 +56,7 @@ export default {
         this.newRequest.address = '';
         this.newRequest.model = '';
         alert('Request done!');
+        this.$router.replace('/results');
       },
 
       close() {

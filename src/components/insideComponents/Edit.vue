@@ -1,13 +1,23 @@
 <template>
-    <div class="container">
-        <form @submit.prevent="updateRequest" class="request">
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+        <form @submit.prevent="updateRequest" class="edit">
             <h3>Edit request</h3>
-            <input type="text" class="requestInput" v-model="newRequest.name"/>
-            <input type="text" class="requestInput" v-model="newRequest.address" />
-            <input type="text" class="requestInput" v-model="newRequest.model" />
+            <input type="text" class="editInput" v-model="newRequest.name"/>
+            <input type="text" class="editInput" v-model="newRequest.address" />
+            <input type="text" class="editInput" v-model="newRequest.model" />
 
-            <input type="submit" class="requestButton" value="Update Item"/>
+            <div class="inputContainer">
+              <input type="submit" class="editButton" value="Update Request"/>
+            </div>
         </form>
+    </div>
     </div>
 </template>
 
@@ -71,14 +81,15 @@ export default {
         font-size: 20px;
     }
 
-    .request {
+    .edit {
         margin: 50px auto;
-        width: 500px;
+        width: 55%;
         padding: 30px 25px;
-        background: #ccc;
+        background: #F5F5F5;
+        box-shadow: 1px 1px 2px #888888;
     }
 
-    .requestInput {
+    .editInput {
         width: 100%;
         height: 50px;
         margin-bottom: 25px;
@@ -88,22 +99,31 @@ export default {
         border: 1px solid #ccc;
     }
 
-    .requestInput:focus {
+    .editInput:focus {
         border-color: #6e8095;
         outline: none;
     }
 
-    .requestButton {
-        width: 100%;
+    .editButton {
+        width: 30%;
         height: 50px;
         padding: 0;
+        margin: 0 auto;
         font-size: 18px;
         color: #fff;
         text-align: center;
-        background: black;
+        background-color: #069868;
         border: 0;
         cursor: pointer;
         outline: 0;
-        border-radius: 3px;
+        transition: box-shadow 0.5s;
+    }
+
+    .editButton:hover {
+        box-shadow: 3px 4px 2px #888888;
+    }
+
+    .inputContainer {
+      text-align: center;
     }
 </style>
