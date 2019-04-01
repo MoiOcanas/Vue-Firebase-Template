@@ -82,6 +82,13 @@ export default {
     @media (min-width: 320px) and (max-width: 480px) {
         .mainContent {
             display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
+
+    @media (min-width: 481px) and (max-width: 1024px) {
+        .mainContent {
+            display: grid;
             grid-template-columns: auto;
         }
     }
