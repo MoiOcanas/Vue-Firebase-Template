@@ -79,6 +79,7 @@ export default {
         border-radius: 3px;
     }
 
+    /* Cellphone */
     @media (min-width: 320px) and (max-width: 480px) {
         .mainContent {
             display: grid;
@@ -86,6 +87,7 @@ export default {
         }
     }
 
+    /* Tablet */
     @media (min-width: 481px) and (max-width: 1024px) {
         .mainContent {
             display: grid;

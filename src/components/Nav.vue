@@ -153,6 +153,7 @@ ul li.active a {
   }
 }
 
+/* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
   ul.responsive {
     position: relative;

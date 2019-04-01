@@ -126,6 +126,7 @@ ul li.active a {
   color: #000;
 }
 
+/* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
   .title {
     position: absolute;
@@ -144,6 +145,7 @@ ul li.active a {
   }
 }
 
+/* Tablet */
 @media (min-width: 481px) and (max-width: 1024px) {
   .title {
     position: absolute;

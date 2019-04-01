@@ -101,9 +101,17 @@ h3 {
   box-shadow: 3px 4px 2px #888888;
 }
 
+/* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
     .login {
         width: 90%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .login {
+        width: 70%;
     }
 }
 </style>

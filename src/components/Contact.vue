@@ -143,6 +143,7 @@ h6 {
   grid-template-columns: auto auto auto;
 }
 
+/* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
   .mainContent {
     display: grid;
@@ -153,6 +154,7 @@ h6 {
   }
 }
 
+/* Tablet */
 @media (min-width: 481px) and (max-width: 1024px) {
   .mainContent {
     display: grid;
