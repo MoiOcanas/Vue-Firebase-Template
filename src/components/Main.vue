@@ -143,4 +143,18 @@ ul li.active a {
     margin: 5px;
   }
 }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .title {
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .button {
+    text-align: center;
+  }
+
+}
 </style>

@@ -152,6 +152,16 @@ h6 {
     display: none;
   }
 }
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .mainContent {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .mainContent i {
+    display: none;
+  }
+}
 </style>
 
 
