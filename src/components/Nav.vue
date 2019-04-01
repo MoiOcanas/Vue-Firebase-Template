@@ -1,18 +1,41 @@
 <template>
-    <div>
-      <ul>
-        <i class="fab fa-vuejs fa-3x icon-vue"></i>
-        <li v-if="!authUser"><router-link :to="{ name: 'Login'}">LOGIN</router-link></li>
-        <li v-if="!authUser"><router-link :to="{ name: 'Signup'}">SIGNUP</router-link></li>
-        <li v-if="!authUser"><router-link :to="{ name: 'About'}">ABOUT</router-link></li>
-        <li v-if="!authUser"><router-link :to="{ name: 'Contact'}">OUR TEAM</router-link></li>
-        <li v-if="!authUser"><router-link :to="{ name: 'Main'}">HOME</router-link></li>
-        <li v-if="authUser"><router-link :to="{ name: 'Profile'}">PROFILE</router-link></li>
-        <li v-if="authUser"><router-link :to="{ name: 'Request'}">REQUEST</router-link></li>
-        <li v-if="authUser"><router-link :to="{ name: 'Results'}">RESULTS</router-link></li>
-        <li v-if="authUser"><a @click="logout" id="logOut">LOGOUT</a></li>
-      </ul>
-    </div>
+  <div>
+    <ul id="navTo">
+      <i class="fab fa-vuejs fa-3x icon-vue"></i>
+      <li v-if="!authUser">
+        <router-link :to="{ name: 'Login'}">LOGIN</router-link>
+      </li>
+      <li v-if="!authUser">
+        <router-link :to="{ name: 'Signup'}">SIGNUP</router-link>
+      </li>
+      <li v-if="!authUser">
+        <router-link :to="{ name: 'About'}">ABOUT</router-link>
+      </li>
+      <li v-if="!authUser">
+        <router-link :to="{ name: 'Contact'}">OUR TEAM</router-link>
+      </li>
+      <li v-if="!authUser">
+        <router-link :to="{ name: 'Main'}">HOME</router-link>
+      </li>
+      <li v-if="authUser">
+        <router-link :to="{ name: 'Profile'}">PROFILE</router-link>
+      </li>
+      <li v-if="authUser">
+        <router-link :to="{ name: 'Request'}">REQUEST</router-link>
+      </li>
+      <li v-if="authUser">
+        <router-link :to="{ name: 'Results'}">RESULTS</router-link>
+      </li>
+      <li v-if="authUser">
+        <a @click="logout" id="logOut">LOGOUT</a>
+      </li>
+      <li>
+        <a href="javascript:void(0);" @click="showNav()" class="icon">
+          <i class="fas fa-bars"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 <script>
 import firebase from "firebase";
@@ -41,6 +64,14 @@ export default {
         .catch(e => {
           alert(e.message);
         });
+    },
+    showNav() {
+      let x = document.getElementById("navTo");
+      if (x.className === "main-navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "main-navbar";
+      }
     }
   },
   created() {
@@ -53,16 +84,16 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 6px 0px;
-    overflow: hidden;
-    background-color: #F5F5F5;
-    border-bottom: 3px solid #069868;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 3;
+  list-style-type: none;
+  margin: 0;
+  padding: 6px 0px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-bottom: 3px solid #069868;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
 }
 
 ul li {
@@ -71,17 +102,21 @@ ul li {
 }
 
 ul li a {
-    display: block;
-    color: #000;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    transition: background-color 0.6s ease, color 0.6s ease;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.6s ease, color 0.6s ease;
 }
 
 ul li a:hover {
   color: #fff;
-  background-color: #3B3C3C;
+  background-color: #3b3c3c;
+}
+
+ul .icon {
+  display: none;
 }
 
 .icon-vue {
@@ -99,7 +134,7 @@ ul li a:hover {
 
 #logOut:hover {
   color: #fff;
-  background-color: #3B3C3C;
+  background-color: #3b3c3c;
   cursor: pointer;
 }
 
@@ -117,5 +152,39 @@ ul li a:hover {
 ul li.active a {
   background-color: #fff;
   color: #000;
+}
+
+/* Cellphone */
+@media (min-width: 320px) and (max-width: 480px) {
+  .main-navbar a:not(:first-child) {
+    display: none;
+  }
+  
+  .main-navbar a.icon {
+    float: right;
+    display: block;
+  }
+  .main-data {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  .main-navbar.responsive {
+    position: relative;
+  }
+  
+  .main-navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .main-navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
 }
 </style>
