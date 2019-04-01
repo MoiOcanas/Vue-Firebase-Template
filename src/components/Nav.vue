@@ -1,7 +1,7 @@
 <template>
   <div>
     <ul id="navTo">
-      <i class="fab fa-vuejs fa-3x icon-vue"></i>
+      <!-- <i class="fab fa-vuejs fa-3x icon-vue"></i> -->
       <router-link v-if="!authUser" :to="{ name: 'Login'}">LOGIN</router-link>
       <router-link v-if="!authUser" :to="{ name: 'Signup'}">SIGNUP</router-link>
       <router-link v-if="!authUser" :to="{ name: 'About'}">ABOUT</router-link>
@@ -93,7 +93,6 @@ ul a {
   padding: 14px 16px;
   text-decoration: none;
   transition: background-color 0.6s ease, color 0.6s ease;
-
   float: right;
   margin: 8px;
 }
@@ -144,7 +143,7 @@ ul li.active a {
 
 /* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
-  ul a:not(:first-child) {
+  ul a {
     display: none;
   }
 
