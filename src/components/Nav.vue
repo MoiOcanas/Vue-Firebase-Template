@@ -2,21 +2,11 @@
   <div>
     <ul id="navTo">
       <i class="fab fa-vuejs fa-3x icon-vue"></i>
-      <li v-if="!authUser">
-        <router-link :to="{ name: 'Login'}">LOGIN</router-link>
-      </li>
-      <li v-if="!authUser">
-        <router-link :to="{ name: 'Signup'}">SIGNUP</router-link>
-      </li>
-      <li v-if="!authUser">
-        <router-link :to="{ name: 'About'}">ABOUT</router-link>
-      </li>
-      <li v-if="!authUser">
-        <router-link :to="{ name: 'Contact'}">OUR TEAM</router-link>
-      </li>
-      <li v-if="!authUser">
-        <router-link :to="{ name: 'Main'}">HOME</router-link>
-      </li>
+      <router-link v-if="!authUser" :to="{ name: 'Login'}">LOGIN</router-link>
+      <router-link v-if="!authUser" :to="{ name: 'Signup'}">SIGNUP</router-link>
+      <router-link v-if="!authUser" :to="{ name: 'About'}">ABOUT</router-link>
+      <router-link v-if="!authUser" :to="{ name: 'Contact'}">OUR TEAM</router-link>
+      <router-link v-if="!authUser" :to="{ name: 'Main'}">HOME</router-link>
       <li v-if="authUser">
         <router-link :to="{ name: 'Profile'}">PROFILE</router-link>
       </li>
@@ -96,21 +86,19 @@ ul {
   z-index: 3;
 }
 
-ul li {
-  float: right;
-  margin: 8px;
-}
-
-ul li a {
+ul a {
   display: block;
   color: #000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   transition: background-color 0.6s ease, color 0.6s ease;
+
+  float: right;
+  margin: 8px;
 }
 
-ul li a:hover {
+ul a:hover {
   color: #fff;
   background-color: #3b3c3c;
 }
@@ -156,32 +144,28 @@ ul li.active a {
 
 /* Cellphone */
 @media (min-width: 320px) and (max-width: 480px) {
-  .main-navbar a:not(:first-child) {
+  ul a:not(:first-child) {
     display: none;
   }
-  
-  .main-navbar a.icon {
+
+  ul a.icon {
     float: right;
     display: block;
   }
-  .main-data {
-    display: grid;
-    grid-template-columns: auto;
-  }
 }
 
-@media (min-width: 320px) and (max-width: 480px){
-  .main-navbar.responsive {
+@media (min-width: 320px) and (max-width: 480px) {
+  ul.responsive {
     position: relative;
   }
-  
-  .main-navbar.responsive .icon {
+
+  ul.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  
-  .main-navbar.responsive a {
+
+  ul.responsive a {
     float: none;
     display: block;
     text-align: center;
