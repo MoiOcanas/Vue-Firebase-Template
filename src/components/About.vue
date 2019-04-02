@@ -8,6 +8,10 @@
             <h1>About</h1>
             <br>
             <div class="mainContent">
+                <div class="textProps" style="text-align: center;">
+                    <img src="https://assets.t3n.sc/news/wp-content/uploads/2016/05/vue.js_2.0_frontend-framework.jpg?auto=compress%2Cformat&fit=crop&fm=jpg&h=347&ixlib=php-1.1.0&q=65&w=620&s=8398eacd030d9955f6805f64df9e66fe" class="imgProps img-fluid" alt="">
+                    <i class="fas fa-angle-right fa-3x ico"></i>
+                </div>
                 <div class="textProps">
                     <h3>What's VUE?</h3>
                     <p class="text-justify">Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.
@@ -17,13 +21,11 @@
                         If you are an experienced frontend developer and want to know how Vue compares to other libraries/frameworks, check out the Comparison with Other Frameworks.
                     </p>
                 </div>
-                <div class="textProps">
-                    <img src="https://assets.t3n.sc/news/wp-content/uploads/2016/05/vue.js_2.0_frontend-framework.jpg?auto=compress%2Cformat&fit=crop&fm=jpg&h=347&ixlib=php-1.1.0&q=65&w=620&s=8398eacd030d9955f6805f64df9e66fe" class="imgProps img-fluid" alt="">
-                </div>
             </div>
             <div class="mainContent">
-                <div class="textProps">
+                <div class="textProps" style="text-align: center;">
                     <img src="http://i.imgur.com/sArf3QE.png" class="imgProps paddingProp img-fluid" alt="">
+                    <i class="fas fa-angle-right fa-3x ico"></i>
                 </div>
                 <div class="textProps">
                     <h3>VUE Atributes</h3>
@@ -71,7 +73,7 @@ export default {
     }
 
     .imgProps {
-        width: 100%;
+        width: 80%;
     }
 
     .paddingProp {
@@ -83,7 +85,11 @@ export default {
     @media (min-width: 320px) and (max-width: 480px) {
         .mainContent {
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: auto;
+        }
+
+        .textProps i {
+            display: none;
         }
     }
 
@@ -92,6 +98,10 @@ export default {
         .mainContent {
             display: grid;
             grid-template-columns: auto;
+        }
+
+        .textProps i {
+            display: none;
         }
     }
 </style>
