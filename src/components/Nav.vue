@@ -7,18 +7,12 @@
       <router-link v-if="!authUser" :to="{ name: 'About'}">ABOUT</router-link>
       <router-link v-if="!authUser" :to="{ name: 'Contact'}">OUR TEAM</router-link>
       <router-link v-if="!authUser" :to="{ name: 'Main'}">HOME</router-link>
-      <li v-if="authUser">
-        <router-link :to="{ name: 'Profile'}">PROFILE</router-link>
-      </li>
-      <li v-if="authUser">
-        <router-link :to="{ name: 'Request'}">REQUEST</router-link>
-      </li>
-      <li v-if="authUser">
-        <router-link :to="{ name: 'Results'}">RESULTS</router-link>
-      </li>
-      <li v-if="authUser">
-        <a @click="logout" id="logOut">LOGOUT</a>
-      </li>
+
+      <!-- If user login -->
+      <router-link v-if="authUser" :to="{ name: 'Profile'}">PROFILE</router-link>
+      <router-link v-if="authUser" :to="{ name: 'Request'}">REQUEST</router-link>
+      <router-link v-if="authUser" :to="{ name: 'Results'}">RESULTS</router-link>
+      <a @click="logout" v-if="authUser" id="logOut">LOGOUT</a>
       <li>
         <a href="javascript:void(0);" @click="showNav()" class="icon">
           <i class="fas fa-bars"></i>
