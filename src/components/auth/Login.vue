@@ -38,7 +38,7 @@ export default {
           if (user.email == "admin@gmail.com" && user.password == "123456") {
             this.$router.replace("/admrequests");
           } else {
-            this.$router.replace("/maindashboard");
+            this.$router.replace("/profile");
           }
         })
         .catch(e => {
