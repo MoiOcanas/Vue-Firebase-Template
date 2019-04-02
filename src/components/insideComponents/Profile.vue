@@ -5,6 +5,7 @@
             <h3>This is the Profile page</h3>
             <div class="row">
                 <div class="col-6">
+                    <br><br>
                     <div>
                         <h6>Welcome: {{ currentUser }}!</h6>
                     </div>
