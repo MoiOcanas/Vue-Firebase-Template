@@ -2,16 +2,16 @@
   <div>
     <ul id="navTo">
       <!-- <i class="fab fa-vuejs fa-3x icon-vue"></i> -->
-      <router-link v-if="!authUser" :to="{ name: 'Login'}">LOGIN</router-link>
-      <router-link v-if="!authUser" :to="{ name: 'Signup'}">SIGNUP</router-link>
-      <router-link v-if="!authUser" :to="{ name: 'About'}">ABOUT</router-link>
-      <router-link v-if="!authUser" :to="{ name: 'Contact'}">OUR TEAM</router-link>
-      <router-link v-if="!authUser" :to="{ name: 'Main'}">HOME</router-link>
+      <router-link v-if="!authUser" :to="{ name: 'Login'}"><span @click="showNav()">LOGIN</span></router-link>
+      <router-link v-if="!authUser" :to="{ name: 'Signup'}"><span @click="showNav()">SIGNUP</span></router-link>
+      <router-link v-if="!authUser" :to="{ name: 'About'}"><span @click="showNav()">ABOUT</span></router-link>
+      <router-link v-if="!authUser" :to="{ name: 'Contact'}"><span @click="showNav()">OUR TEAM</span></router-link>
+      <router-link v-if="!authUser" :to="{ name: 'Main'}"><span @click="showNav()">HOME</span></router-link>
 
       <!-- If user login -->
-      <router-link v-if="authUser" :to="{ name: 'Profile'}">PROFILE</router-link>
-      <router-link v-if="authUser" :to="{ name: 'Request'}">REQUEST</router-link>
-      <router-link v-if="authUser" :to="{ name: 'Results'}">RESULTS</router-link>
+      <router-link v-if="authUser" :to="{ name: 'Profile'}"><span @click="showNav()">PROFILE</span></router-link>
+      <router-link v-if="authUser" :to="{ name: 'Request'}"><span @click="showNav()">REQUEST</span></router-link>
+      <router-link v-if="authUser" :to="{ name: 'Results'}"><span @click="showNav()">RESULTS</span></router-link>
       <a @click="logout" v-if="authUser" id="logOut">LOGOUT</a>
       <li>
         <a href="javascript:void(0);" @click="showNav()" class="icon">
@@ -54,6 +54,12 @@ export default {
       if (x.className === "main-navbar") {
         x.className += " responsive";
       } else {
+        x.className = "main-navbar";
+      }
+    },
+    closeNav() {
+      let x = document.getElementById('navTo');
+      if (x.className === "responsive") {
         x.className = "main-navbar";
       }
     }
